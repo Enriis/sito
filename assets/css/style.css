@@ -42,7 +42,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: rgb(81, 0, 173);
+  background: rgb(73, 73, 74);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -84,7 +84,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid rgb(81, 0, 173);
+  border: 6px solid #45505b;
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -275,7 +275,7 @@ h6 {
 
 .mobile-nav-active .mobile-nav-toggle {
   color: #fff;
-  background-color: rgb(81, 0, 173);
+  background-color: #45505b;
 }
 
 /*--------------------------------------------------------------
@@ -402,7 +402,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: rgb(81, 0, 173);
+  background: #45505b;
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -438,7 +438,7 @@ section {
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: rgb(81, 0, 173);
+  color: #45505b;
   line-height: 0;
 }
 
@@ -464,7 +464,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  background: rgb(81, 0, 173);
+  background: #45505b;
   color: #fff;
   border-radius: 50px;
   display: inline-flex;
@@ -521,7 +521,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: rgb(81, 0, 173);
+  background-color: #45505b;
 }
 
 /*--------------------------------------------------------------
@@ -538,7 +538,7 @@ section {
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid rgb(81, 0, 173);
+  border-left: 2px solid #45505b;
   position: relative;
 }
 
@@ -548,7 +548,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: rgb(81, 0, 173);
+  color: #45505b;
   margin-bottom: 10px;
 }
 
@@ -582,7 +582,7 @@ section {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid rgb(81, 0, 173);
+  border: 2px solid #45505b;
 }
 
 /*--------------------------------------------------------------
@@ -617,7 +617,7 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: rgb(81, 0, 173);
+  color: #45505b;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -763,11 +763,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid rgb(81, 0, 173);
+  border: 1px solid #45505b;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: rgb(81, 0, 173);
+  background-color: #45505b;
 }
 
 .portfolio-details .portfolio-info {
@@ -1010,11 +1010,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid rgb(81, 0, 173);
+  border: 1px solid #45505b;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: rgb(81, 0, 173);
+  background-color: #45505b;
 }
 
 @media (min-width: 992px) {
@@ -1033,7 +1033,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: rgb(81, 0, 173);
+  color: #45505b;
   float: left;
   width: 44px;
   height: 44px;
@@ -1068,7 +1068,7 @@ section {
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: rgb(81, 0, 173);
+  background: #45505b;
   color: #fff;
 }
 
@@ -1139,7 +1139,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: rgb(81, 0, 173);
+  background: #45505b;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -1206,7 +1206,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: rgb(81, 0, 173);
+  background: #45505b;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
