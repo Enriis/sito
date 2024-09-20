@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #272829;
 }
 
@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -318,7 +318,7 @@ h6 {
   color: #ffffff;
   margin: 15px 0 0 0;
   font-size: 26px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.705);
 }
 
@@ -484,7 +484,7 @@ section {
 .facts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
 
@@ -504,7 +504,7 @@ section {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #45505b;
 }
 
@@ -547,7 +547,7 @@ section {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: rgb(242, 196, 111);
   margin-bottom: 10px;
 }
@@ -940,6 +940,160 @@ section {
   fill: #11dbcf;
 }
 
+/* STRUTTURE */
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.strutture .icon-box {
+  text-align: center;
+  padding: 70px 20px 80px 20px;
+  transition: all ease-in-out 0.3s;
+  background: #fff;
+  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+  border-radius: 12px;
+}
+
+.strutture .icon-box .icon {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+  position: relative;
+}
+
+.strutture #primo {
+  background: url("../img/struttura-piscina.png")
+}
+
+.strutture #secondo {
+  background-color: red;
+}
+
+.strutture #terzo {
+  background-color: red;
+}
+
+.strutture #quarto {
+  background-color: red;
+}
+
+.strutture #quinto {
+  background-color: red;
+}
+
+.strutture #sesto {
+  background-color: red;
+}
+
+.strutture .icon-box .icon i {
+  font-size: 36px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.strutture .icon-box h4 {
+  font-weight: 600;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+}
+
+.strutture .icon-box h4 a {
+  color: #ffffff;
+  transition: ease-in-out 0.3s;
+  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.281);
+}
+
+.strutture .icon-box p {
+  color: white;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  text-shadow: 3px 2px 3px rgb(0, 0, 0.505);
+}
+
+.strutture .icon-box:hover {
+  border-color: #fff;
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.08);
+}
+
+.strutture .iconbox-blue i {
+  color: #47aeff;
+}
+
+.strutture .iconbox-blue:hover .icon i {
+  color: #fff;
+}
+
+.strutture .iconbox-blue:hover .icon path {
+  fill: #47aeff;
+}
+
+.strutture .iconbox-orange i {
+  color: #ffa76e;
+}
+
+.strutture .iconbox-orange:hover .icon i {
+  color: #fff;
+}
+
+.strutture .iconbox-orange:hover .icon path {
+  fill: #ffa76e;
+}
+
+.strutture .iconbox-pink i {
+  color: #e80368;
+}
+
+.strutture .iconbox-pink:hover .icon i {
+  color: #fff;
+}
+
+.strutture .iconbox-pink:hover .icon path {
+  fill: #e80368;
+}
+
+.strutture .iconbox-yellow i {
+  color: #ffbb2c;
+}
+
+.strutture .iconbox-yellow:hover .icon i {
+  color: #fff;
+}
+
+.strutture .iconbox-yellow:hover .icon path {
+  fill: #ffbb2c;
+}
+
+.strutture .iconbox-red i {
+  color: #ff5828;
+}
+
+.strutture .iconbox-red:hover .icon i {
+  color: #fff;
+}
+
+.strutture .iconbox-red:hover .icon path {
+  fill: #ff5828;
+}
+
+.strutture .iconbox-teal i {
+  color: #11dbcf;
+}
+
+.strutture .iconbox-teal:hover .icon i {
+  color: #fff;
+}
+
+.strutture .iconbox-teal:hover .icon path {
+  fill: #11dbcf;
+}
+
+
+
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
@@ -1187,7 +1341,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 0;
   margin: 0 0 15px 0;
 }
