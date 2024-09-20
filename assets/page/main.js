@@ -5,20 +5,45 @@ function iscrizione() {
 }
 
 
-// Ottieni il video e lo slider
 const video = document.getElementById("videoPlayer");
-const volumeRange = document.getElementById("volumeRange");
+        const audioMessage = document.querySelector(".audio-message");
+        const playPauseBtn = document.getElementById("playPauseBtn");
+        const volumeRange = document.getElementById("volumeRange");
+        const videoContainer = document.querySelector(".video-container");
+        const customControls = document.querySelector(".custom-controls");
 
-// Imposta il volume iniziale al 50%
-video.volume = 0.5;
-video.muted = true; // Disattiva mute se attivato
+        // Imposta il volume iniziale
+        video.volume = 0.3;
+
+        // Aggiungi evento di clic al video
+        video.addEventListener("click", function() {
+            if (video.muted) {
+                video.muted = false; // Disattiva mute
+                audioMessage.style.display = "none"; // Nasconde il messaggio
+            }
+        });
+
+        // Funzione per controllare il play/pause
+        playPauseBtn.addEventListener("click", function() {
+            if (video.paused) {
+                video.play();
+                playPauseBtn.textContent = "Pause";
+            } else {
+                video.pause();
+                playPauseBtn.textContent = "Play";
+            }
+        });
 
 
-video.addEventListener("mouseenter", function() {
-    video.muted = false; // Disattiva mute
-    video.play(); // Riproduce il video
-});
+        // Mostra i controlli quando il mouse è sopra il video
+        videoContainer.addEventListener("mouseenter", function() {
+            customControls.style.display = "flex"; // Mostra i controlli
+        });
 
+        // Nasconde i controlli quando il mouse esce dal video
+        videoContainer.addEventListener("mouseleave", function() {
+            customControls.style.display = "none"; // Nasconde i controlli
+        });
 
 
 // Cambia il volume quando l'utente sposta lo slider

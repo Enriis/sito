@@ -58,14 +58,43 @@ header {
     text-shadow: 6px 5px 6px rgba(0, 0, 0, 0.3);
 }
 
-.video-container {
-    width: 50%; /* Larghezza adeguata per il video */
-    display: flex;
-    justify-content: center;
+.audio-message {
+    text-align: left;
+    margin-top: 10px;
 }
-
-.video-container video {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+.video-container {
+    position: relative;
+    width: 640px; /* Imposta la larghezza desiderata */
+    margin: auto; /* Centra il video */
+}
+video {
+    width: 100%; /* Adatta il video alla larghezza del contenitore */
+    border-radius: 10px; /* Raggio degli angoli */
+}
+.custom-controls {
+    display: none; /* Nasconde i controlli per default */
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 0; /* Assicura che i controlli siano sopra il video */
+}
+.custom-controls button {
+    margin-right: 10px;
+    background: #3031304d; /* Colore del bottone */
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.custom-controls button:hover {
+    background: #45a0490f; /* Colore al passaggio del mouse */
+}
+.custom-controls input[type="range"] {
+    width: 70px; /* Larghezza dello slider */
+    cursor: pointer;
 }
