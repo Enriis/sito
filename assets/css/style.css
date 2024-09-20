@@ -284,7 +284,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top right no-repeat;
+  background: url("../img/hero-bg.jpg");
   background-size: cover;
   position: relative;
 }
@@ -950,7 +950,7 @@ section {
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
-  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+  box-shadow:  0px 5px 10px 0px rgba(6, 6, 6, 0.482);
   border-radius: 12px;
 }
 
@@ -966,27 +966,27 @@ section {
 }
 
 .strutture #primo {
-  background: url("../img/struttura-piscina.png")
+  background: url("../img/2.jpg")
 }
 
 .strutture #secondo {
-  background-color: red;
+  background: url("../img/3.jpg")
 }
 
 .strutture #terzo {
-  background-color: red;
+  background: url("../img/4.jpg")
 }
 
 .strutture #quarto {
-  background-color: red;
+  background: url("../img/5.jpg")
 }
 
 .strutture #quinto {
-  background-color: red;
+  background: url("../img/6.jpg")
 }
 
 .strutture #sesto {
-  background-color: red;
+  background: url("../img/7.jpg")
 }
 
 .strutture .icon-box .icon i {
