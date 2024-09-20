@@ -940,6 +940,25 @@ section {
   fill: #11dbcf;
 }
 
+.services #richiestainfo-corsi {
+  width: 200px;
+  background-color: rgba(128, 128, 128, 0.246);
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  border-color: #c4c4c4;
+  margin-top: 40px;
+  transition: transform 0.5s ease;
+}
+
+
+
+#richiestainfo-corsi:hover {
+  background-color: #01142600;
+  box-shadow:  0px 5px 10px 0px rgba(6, 6, 6, 0.482);
+  transform: scale(1.1);
+}
+
 /* STRUTTURE */
 
 /*--------------------------------------------------------------
