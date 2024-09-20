@@ -6,6 +6,8 @@ body {
     background: linear-gradient(to right, #ff8b61, #ff35ba); /* Da sinistra a destra */
     font-family: 'Montserrat', sans-serif;
     text-shadow: 6px 5px 6px rgba(0, 0, 0, 0.3);
+    margin: 0; /* Rimuovi il margine predefinito */
+    padding: 0; /* Rimuovi il padding predefinito */
 }
 
 header {
@@ -16,9 +18,9 @@ header {
 .container {
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 120px;
+    flex-direction: column; /* Cambia la direzione per schermi piccoli */
+    align-items: center; /* Centra gli elementi */
+    padding: 20px 10px; /* Padding più piccolo per schermi piccoli */
 }
 
 .banner-corso {
@@ -26,21 +28,21 @@ header {
     flex-direction: column;
     justify-content: center;
     color: white;
-    width: 45%;
+    width: 100%; /* Adatta alla larghezza del contenitore */
+    max-width: 600px; /* Larghezza massima per desktop */
     line-height: 65px;
+    text-align: center; /* Centra il testo */
 }
 
 .banner-corso h1 {
     font-size: 50px;
     margin-bottom: -10px;
     word-spacing: 2px;
-    text-align: left;
 }
 
 .banner-corso p {
     font-size: 24px;
     margin-top: 5px;
-    text-align: left;
 }
 
 .banner-corso button {
@@ -62,25 +64,31 @@ header {
     text-align: left;
     margin-top: 10px;
 }
+
 .video-container {
     position: relative;
-    width: 640px; /* Imposta la larghezza desiderata */
-    margin: auto; /* Centra il video */
+    width: 100%; /* Adatta alla larghezza del contenitore */
+    max-width: 640px; /* Limita la larghezza massima */
+    margin: 20px 0; /* Margine verticale */
 }
+
 video {
     width: 100%; /* Adatta il video alla larghezza del contenitore */
     border-radius: 10px; /* Raggio degli angoli */
 }
+
 .custom-controls {
     display: none; /* Nasconde i controlli per default */
     position: absolute;
     bottom: 10px;
-    left: 10%;
-    transform: translateX(-50%);
+    left: 50%; /* Centro orizzontale */
+    transform: translateX(-50%); /* Centro esatto */
+    background: rgba(0, 0, 0, 0.7); /* Sfondo traslucido */
     border-radius: 5px;
     padding: 10px;
-    z-index: 0; /* Assicura che i controlli siano sopra il video */
+    z-index: 1; /* Assicura che i controlli siano sopra il video */
 }
+
 .custom-controls button {
     margin-right: 10px;
     background: #3031304d; /* Colore del bottone */
@@ -91,10 +99,42 @@ video {
     cursor: pointer;
     transition: background 0.3s;
 }
+
 .custom-controls button:hover {
     background: #45a0490f; /* Colore al passaggio del mouse */
 }
+
 .custom-controls input[type="range"] {
     width: 70px; /* Larghezza dello slider */
     cursor: pointer;
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Colonna su schermi piccoli */
+        padding: 20px; /* Padding uniforme */
+    }
+    
+    .banner-corso {
+        width: 100%; /* Adatta a schermi piccoli */
+        max-width: none; /* Rimuovi il limite di larghezza */
+        text-align: center; /* Centra il testo */
+    }
+
+    .banner-corso h1 {
+        font-size: 36px; /* Dimensione del testo più piccola */
+    }
+
+    .banner-corso p {
+        font-size: 18px; /* Dimensione del testo più piccola */
+    }
+
+    .video-container {
+        width: 100%; /* Adatta alla larghezza del contenitore */
+    }
+
+    .custom-controls {
+        padding: 8px; /* Riduci il padding per schermi piccoli */
+    }
 }
