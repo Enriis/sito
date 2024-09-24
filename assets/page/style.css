@@ -1,140 +1,186 @@
-* {
-    box-sizing: border-box;
+
+:root {
+    --colore-sfondo: #f0f0f0;
+    --colore-primario: #333333;
+    --colore-secondario: #555555;
+    --colore-accento: #000000;
+    --colore-testo: #222222;
 }
 
 body {
-    background: linear-gradient(to right, #ff8b61, #ff35ba); /* Da sinistra a destra */
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 6px 5px 6px rgba(0, 0, 0, 0.3);
-    margin: 0; /* Rimuovi il margine predefinito */
-    padding: 0; /* Rimuovi il padding predefinito */
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: var(--colore-sfondo);
+    color: var(--colore-testo);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-header {
-    color: white;
-    padding: 40px 0;
+.blur-background {
+    transition: filter 0.3s ease;
 }
 
-.container {
-    margin-top: 50px;
+.blur {
+    filter: blur(10px);
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
-    flex-direction: column; /* Cambia la direzione per schermi piccoli */
-    align-items: center; /* Centra gli elementi */
-    padding: 20px 10px; /* Padding più piccolo per schermi piccoli */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
-.banner-corso {
+.popup.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
-    width: 100%; /* Adatta alla larghezza del contenitore */
-    max-width: 600px; /* Larghezza massima per desktop */
-    line-height: 65px;
-    text-align: center; /* Centra il testo */
+    align-items: center;
 }
 
-.banner-corso h1 {
-    font-size: 50px;
-    margin-bottom: -10px;
-    word-spacing: 2px;
+.popup h2 {
+    color: var(--colore-primario);
+    margin-bottom: 20px;
+    font-size: 2em;
 }
 
-.banner-corso p {
-    font-size: 24px;
-    margin-top: 5px;
+.popup input {
+    display: block;
+    margin: 15px 0;
+    padding: 14px;
+    width: 100%;
+    border: 2px solid var(--colore-secondario);
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: var(--colore-sfondo);
+    color: var(--colore-testo);
 }
 
-.banner-corso button {
-    margin-bottom: 0px;
-    width: 200px;
-    box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.3);
-    padding: 10px 20px;
-    font-size: 18px;
-    background: linear-gradient(to right, #ff35ba, #ff8b61);
-    color: white;
+.popup input:focus {
+    border-color: var(--colore-primario);
+    outline: none;
+}
+
+.popup button {
+    padding: 14px 28px;
+    background-color: var(--colore-primario);
+    color: #ffffff;
     border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
     cursor: pointer;
-    border-radius: 12px;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 6px 5px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
-.audio-message {
-    text-align: left;
-    margin-top: 10px;
+.popup button:hover {
+    background-color: var(--colore-accento);
+}
+
+#mainPage {
+    padding: 30px;
+    background-color: #ffffff;
 }
 
 .video-container {
-    position: relative;
-    width: 100%; /* Adatta alla larghezza del contenitore */
-    max-width: 640px; /* Limita la larghezza massima */
-    margin: 20px 0; /* Margine verticale */
+    margin-top: 40px;
+    text-align: center;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 12px;
 }
 
-video {
-    width: 100%; /* Adatta il video alla larghezza del contenitore */
-    border-radius: 10px; /* Raggio degli angoli */
+.video-container video {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.custom-controls {
-    display: none; /* Nasconde i controlli per default */
-    position: absolute;
-    bottom: 10px;
-    left: 50%; /* Centro orizzontale */
-    transform: translateX(-50%); /* Centro esatto */
-    background: rgba(0, 0, 0, 0.7); /* Sfondo traslucido */
-    border-radius: 5px;
-    padding: 10px;
-    z-index: 1; /* Assicura che i controlli siano sopra il video */
+.controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 }
 
-.custom-controls button {
-    margin-right: 10px;
-    background: #3031304d; /* Colore del bottone */
-    color: white;
+.controls button {
+    padding: 12px 24px;
+    background-color: var(--colore-primario);
+    color: #ffffff;
     border: none;
-    padding: 4px 8px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
-.custom-controls button:hover {
-    background: #45a0490f; /* Colore al passaggio del mouse */
+.controls button:hover {
+    background-color: var(--colore-accento);
 }
 
-.custom-controls input[type="range"] {
-    width: 70px; /* Larghezza dello slider */
+h1 {
+    font-size: 2.4em;
+    text-align: center;
+    margin-top: 30px;
+    color: var(--colore-primario);
+}
+
+#buyButton {
+    display: block;
+    margin: 40px auto;
+    padding: 14px 40px;
+    font-size: 1.4em;
+    background-color: var(--colore-primario);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Media Queries per dispositivi mobili */
+#buyButton:hover {
+    background-color: var(--colore-accento);
+}
+
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Colonna su schermi piccoli */
-        padding: 20px; /* Padding uniforme */
+    .popup form {
+        padding: 25px;
+        max-width: 90%;
     }
     
-    .banner-corso {
-        width: 100%; /* Adatta a schermi piccoli */
-        max-width: none; /* Rimuovi il limite di larghezza */
-        text-align: center; /* Centra il testo */
+    h1 {
+        font-size: 2em;
     }
 
-    .banner-corso h1 {
-        font-size: 36px; /* Dimensione del testo più piccola */
+    #buyButton {
+        font-size: 1.2em;
+        padding: 12px 30px;
     }
 
-    .banner-corso p {
-        font-size: 18px; /* Dimensione del testo più piccola */
-    }
-
-    .video-container {
-        width: 100%; /* Adatta alla larghezza del contenitore */
-    }
-
-    .custom-controls {
-        padding: 8px; /* Riduci il padding per schermi piccoli */
+    .controls button {
+        padding: 10px 18px;
+        font-size: 0.9em;
     }
 }
