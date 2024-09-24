@@ -271,6 +271,5 @@
 
 function iscrizione() {
   // Reindirizza alla pagina di iscrizione
-  window.location.href = 'assets/page/visual.html';
-  console.log("porco dio");
+  window.location.href = 'visual.html';
 }
